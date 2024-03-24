@@ -1,6 +1,7 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
-import { Image, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { SafeAreaView, ScrollView, Text } from 'react-native';
+import Animated from 'react-native-reanimated';
 
 import { Cities } from '~/assets/cities';
 
@@ -11,7 +12,11 @@ const CityDetails = () => {
 
   return (
     <SafeAreaView className="bg-white flex-1">
-      <Image source={{ uri: cityDetails?.image }} className="w-full h-[400]" />
+      <Animated.Image
+        source={{ uri: cityDetails?.image }}
+        className="w-full h-[400]"
+        sharedTransitionTag={`image-${cityDetails?.id}`}
+      />
       <ScrollView showsVerticalScrollIndicator={false} className="px-2 pt-3">
         <Text className="font-bold text-3xl text-neutral-700 my-1">{cityDetails?.name}</Text>
         <Text className="font-semibold text-base px-2">

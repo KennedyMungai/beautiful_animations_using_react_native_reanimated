@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { FlatList, Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
+import Animated from 'react-native-reanimated';
 
 import { Cities } from '~/assets/cities';
 
@@ -21,10 +22,11 @@ const MainAppPage = () => {
           renderItem={({ item }) => (
             <Link href={`/cityDetails/${item.id}`} asChild>
               <TouchableOpacity className="m-1">
-                <Image
+                <Animated.Image
                   source={{ uri: item.image }}
                   className="w-52 h-52 rounded-md"
                   resizeMode="cover"
+                  sharedTransitionTag={`image-${item.id}`}
                 />
                 <Text className="text-xl font-bold text-neutral-600">{item.name}</Text>
               </TouchableOpacity>

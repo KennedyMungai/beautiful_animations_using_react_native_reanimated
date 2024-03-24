@@ -6,7 +6,7 @@ import '../global.css';
 const MainPageLayout = () => {
   return (
     <Stack>
-      <Stack.Screen name="index" options={{ headerTransparent: true }} />
+      <Stack.Screen name="index" options={{ headerTransparent: true, headerShown: false }} />
     </Stack>
   );
 };

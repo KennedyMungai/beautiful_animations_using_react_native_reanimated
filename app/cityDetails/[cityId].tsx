@@ -20,7 +20,7 @@ const CityDetails = () => {
       <ScrollView showsVerticalScrollIndicator={false} className="px-2 pt-3">
         <Animated.Text
           entering={LightSpeedInLeft.delay(500)}
-          className="font-bold text-3xl text-neutral-700 my-1">
+          className="font-bold text-4xl text-neutral-700 my-1">
           {cityDetails?.name}
         </Animated.Text>
         <Animated.Text

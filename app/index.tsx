@@ -3,8 +3,6 @@ import React from 'react';
 import { FlatList, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 
-import { sharedElementTransition } from '../utils/shared-element-transition';
-
 import { Cities } from '~/assets/cities';
 
 const MainAppPage = () => {
@@ -29,7 +27,6 @@ const MainAppPage = () => {
                   className="w-52 h-52 rounded-md"
                   resizeMode="cover"
                   sharedTransitionTag={`image-${item.id}`}
-                  sharedTransitionStyle={sharedElementTransition}
                 />
                 <Text className="text-xl font-bold text-neutral-600">{item.name}</Text>
               </TouchableOpacity>

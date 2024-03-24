@@ -4,7 +4,6 @@ import { SafeAreaView, ScrollView, Text } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import { Cities } from '~/assets/cities';
-import { sharedElementTransition } from '~/utils/shared-element-transition';
 
 const CityDetails = () => {
   const { cityId } = useLocalSearchParams();
@@ -17,7 +16,6 @@ const CityDetails = () => {
         source={{ uri: cityDetails?.image }}
         className="w-full h-[400]"
         sharedTransitionTag={`image-${cityDetails?.id}`}
-        sharedTransitionStyle={sharedElementTransition}
       />
       <ScrollView showsVerticalScrollIndicator={false} className="px-2 pt-3">
         <Text className="font-bold text-3xl text-neutral-700 my-1">{cityDetails?.name}</Text>

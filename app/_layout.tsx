@@ -1,17 +1,12 @@
-import '../global.css';
-
 import { Stack } from 'expo-router';
+import React from 'react';
 
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
-
-export default function RootLayout() {
+const MainPageLayout = () => {
   return (
     <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+      <Stack.Screen name="index" />
     </Stack>
   );
-}
+};
+
+export default MainPageLayout;

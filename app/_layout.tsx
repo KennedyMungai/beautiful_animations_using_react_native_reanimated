@@ -9,7 +9,7 @@ const MainPageLayout = () => {
       <Stack.Screen name="index" options={{ headerTransparent: true, headerShown: false }} />
       <Stack.Screen
         name="cityDetails/[cityId]"
-        options={{ headerShown: false, headerTransparent: true }}
+        options={{ headerTransparent: true, headerTitle: '' }}
       />
     </Stack>
   );

@@ -1,15 +1,52 @@
-export const cities = [
-  { name: 'Nairobi, Kenya', image: 'https://source.unsplash.com/300x200/?nairobi' },
-  { name: 'Cape Town, South Africa', image: 'https://source.unsplash.com/300x200/?cape+town' },
-  { name: 'Cairo, Egypt', image: 'https://source.unsplash.com/300x200/?cairo' },
-  { name: 'Lagos, Nigeria', image: 'https://source.unsplash.com/300x200/?lagos' },
+export const Cities = [
   {
-    name: 'Johannesburg, South Africa',
-    image: 'https://source.unsplash.com/300x200/?johannesburg',
+    id: 1,
+    name: 'New York',
+    image: 'https://source.unsplash.com/weekly?new-york-city',
   },
-  { name: 'Khartoum, Sudan', image: 'https://source.unsplash.com/300x200/?khartoum' },
-  { name: 'Dar es Salaam, Tanzania', image: 'https://source.unsplash.com/300x200/?dar+es+salaam' },
-  { name: 'Accra, Ghana', image: 'https://source.unsplash.com/300x200/?accra' },
-  { name: 'Alexandria, Egypt', image: 'https://source.unsplash.com/300x200/?alexandria+egypt' },
-  { name: 'Casablanca, Morocco', image: 'https://source.unsplash.com/300x200/?casablanca' },
+  {
+    id: 2,
+    name: 'Paris',
+    image: 'https://source.unsplash.com/weekly?paris',
+  },
+  {
+    id: 3,
+    name: 'Tokyo',
+    image: 'https://source.unsplash.com/weekly?tokyo',
+  },
+  {
+    id: 4,
+    name: 'London',
+    image: 'https://source.unsplash.com/weekly?london',
+  },
+  {
+    id: 5,
+    name: 'Sydney',
+    image: 'https://source.unsplash.com/weekly?sydney',
+  },
+  {
+    id: 6,
+    name: 'Barcelona',
+    image: 'https://source.unsplash.com/weekly?barcelona',
+  },
+  {
+    id: 7,
+    name: 'Rome',
+    image: 'https://source.unsplash.com/weekly?rome',
+  },
+  {
+    id: 8,
+    name: 'Rio de Janeiro',
+    image: 'https://source.unsplash.com/weekly?rio-de-janeiro',
+  },
+  {
+    id: 9,
+    name: 'Dubai',
+    image: 'https://source.unsplash.com/weekly?dubai',
+  },
+  {
+    id: 10,
+    name: 'Singapore',
+    image: 'https://source.unsplash.com/weekly?singapore',
+  },
 ];

@@ -36,6 +36,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.kennedymungai.beautiful_animations"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cd4094f6-c777-497a-95d0-2b541d4de538"
+      }
     }
   }
 }

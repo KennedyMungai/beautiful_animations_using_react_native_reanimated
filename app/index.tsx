@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
 const MainAppPage = () => {
   return (
-    <View>
-      <Text>MainAppPage</Text>
-    </View>
+    <SafeAreaView className="flex flex-1 bg-white">
+      <View>
+        <Text>MainAppPage</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 

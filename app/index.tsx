@@ -1,5 +1,6 @@
+import { Link } from 'expo-router';
 import React from 'react';
-import { View, Text, SafeAreaView, FlatList, Image } from 'react-native';
+import { FlatList, Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 
 import { Cities } from '~/assets/cities';
 
@@ -18,14 +19,16 @@ const MainAppPage = () => {
           )}
           numColumns={2}
           renderItem={({ item }) => (
-            <View className="m-1">
-              <Image
-                source={{ uri: item.image }}
-                className="w-52 h-52 rounded-md"
-                resizeMode="cover"
-              />
-              <Text className="text-xl font-bold text-neutral-600">{item.name}</Text>
-            </View>
+            <Link href={`/cityDetails/${item.id}`} asChild>
+              <TouchableOpacity className="m-1">
+                <Image
+                  source={{ uri: item.image }}
+                  className="w-52 h-52 rounded-md"
+                  resizeMode="cover"
+                />
+                <Text className="text-xl font-bold text-neutral-600">{item.name}</Text>
+              </TouchableOpacity>
+            </Link>
           )}
         />
       </View>

@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
-import { SafeAreaView, ScrollView, Text } from 'react-native';
-import Animated from 'react-native-reanimated';
+import { SafeAreaView, ScrollView } from 'react-native';
+import Animated, { FadeInLeft, LightSpeedInLeft } from 'react-native-reanimated';
 
 import { Cities } from '~/assets/cities';
 
@@ -18,8 +18,14 @@ const CityDetails = () => {
         sharedTransitionTag={`image-${cityDetails?.id}`}
       />
       <ScrollView showsVerticalScrollIndicator={false} className="px-2 pt-3">
-        <Text className="font-bold text-3xl text-neutral-700 my-1">{cityDetails?.name}</Text>
-        <Text className="font-semibold text-base px-2">
+        <Animated.Text
+          entering={LightSpeedInLeft.delay(500)}
+          className="font-bold text-3xl text-neutral-700 my-1">
+          {cityDetails?.name}
+        </Animated.Text>
+        <Animated.Text
+          entering={FadeInLeft.duration(300).delay(600)}
+          className="font-semibold text-base px-2">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus nobis accusamus deserunt.
           Dignissimos, consequatur dolore aut asperiores natus, mollitia, eveniet nesciunt totam
           obcaecati dolorum ipsa! Rerum labore a dolore fuga adipisci error nisi, illo repudiandae
@@ -107,7 +113,7 @@ const CityDetails = () => {
           praesentium distinctio saepe amet consequuntur, quia veritatis quidem. Fuga tempora
           inventore mollitia nemo saepe rerum beatae quos praesentium, fugit suscipit possimus,
           deleniti quibusdam nam, eaque impedit illum amet ullam quae.
-        </Text>
+        </Animated.Text>
       </ScrollView>
     </SafeAreaView>
   );
